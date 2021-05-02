@@ -1,7 +1,18 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { AppleMaps } from 'react-apple-mapkitjs';
 
 class Map extends Component {
+
+    constructor(props) {
+      super(props);
+
+      this.state = {
+        electricPoints: []
+      }
+
+      this.getElectricPoints = this.getElectricPoints.bind(this)
+    }
+
     render() {
       return (
         <AppleMaps 
