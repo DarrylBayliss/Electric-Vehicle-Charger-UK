@@ -1,12 +1,10 @@
-import React, { Component, Fragment } from 'react'
-import Map from '../components/Map'
+import React, { Component } from 'react'
+import MapView from '../components/MapView.js'
 
 class App extends Component {
   render () {
     return (
-      <Fragment>
-        <Map/>
-      </Fragment>
+      <MapView/>
     )
   }
 }
