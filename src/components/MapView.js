@@ -26,7 +26,14 @@ class MapView extends Component {
     return (
       <Fragment>
         <NavBar/>
-        <Map tokenOrCallback="eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlRNQk43VDlaMlgifQ.eyJpYXQiOjE2MjA0ODk0NTcsImV4cCI6MTY1MjAyNTQ1NywiaXNzIjoiM0NZTEZUVDNCSCJ9.wPCZsJLYa8H_vHsTzJ_j00O-rZUOOj2aIRwepHOOGfiv3pcLmjyYkZYnZwVy5NGSkangdjWJftgjc0h29hh7kw">
+        <Map tokenOrCallback="eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlRNQk43VDlaMlgifQ.eyJpYXQiOjE2MjA0ODk0NTcsImV4cCI6MTY1MjAyNTQ1NywiaXNzIjoiM0NZTEZUVDNCSCJ9.wPCZsJLYa8H_vHsTzJ_j00O-rZUOOj2aIRwepHOOGfiv3pcLmjyYkZYnZwVy5NGSkangdjWJftgjc0h29hh7kw"
+             region= {{
+               latitude: 53.483959,
+               longitude: -2.244644,
+               latitudeSpan: 13.0,
+               longitudeSpan: 13.0
+             }}
+        >
 
         {
         this.state.electricPoints.map(electricPoint => (
