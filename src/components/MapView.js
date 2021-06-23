@@ -7,25 +7,33 @@ class MapView extends Component {
     super(props)
 
     this.state = {
+      search: '',
       electricPoints: []
     }
-  }
 
-  componentDidMount () {
-    this.getElectricPoints()
-      .then(response => response.json())
-      .then(latestElectricPoints => this.setState({ electricPoints: latestElectricPoints.ChargeDevice }))
-      .catch(error => console.log(error))
+    this.onSearchButtonTapped = this.onSearchButtonTapped.bind(this)
   }
 
   async getElectricPoints () {
     return await fetch('http://localhost:3001/electricPoints')
   }
 
+  async getElectricPointsForTown (town) {
+    return await fetch(`http://localhost:3001/electricPoints?town=${town}`)
+  }
+
+  onSearchButtonTapped (searchText) {
+    this.setState({ electricPoints: [] })
+    this.getElectricPointsForTown(searchText)
+      .then(response => response.json())
+      .then(latestElectricPoints => this.setState({ electricPoints: latestElectricPoints.ChargeDevice }))
+      .catch(error => console.log(error))
+  }
+
   render () {
     return (
       <Fragment>
-        <NavBar/>
+        <NavBar onSearchButtonTapped={this.onSearchButtonTapped}/>
         <Map tokenOrCallback="eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlRNQk43VDlaMlgifQ.eyJpYXQiOjE2MjA0ODk0NTcsImV4cCI6MTY1MjAyNTQ1NywiaXNzIjoiM0NZTEZUVDNCSCJ9.wPCZsJLYa8H_vHsTzJ_j00O-rZUOOj2aIRwepHOOGfiv3pcLmjyYkZYnZwVy5NGSkangdjWJftgjc0h29hh7kw"
              region= {{
                latitude: 53.483959,
