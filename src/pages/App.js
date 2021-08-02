@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Fragment, Component } from 'react'
 import MapView from '../components/MapView.js'
 import NavBar from '../components/NavBar.js'
 
@@ -31,8 +31,13 @@ class App extends Component {
   }
 
   render () {
+    const style = {
+      width: '100vw',
+      height: '100vh'
+    }
+
     return (
-      <div>
+      <div style={style}>
       <Fragment>
       <NavBar onSearchButtonTapped={this.onSearchButtonTapped}/>
       <MapView electricPoints={this.state.electricPoints}/>
