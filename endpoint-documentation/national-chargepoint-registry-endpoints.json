@@ -1,0 +1,158 @@
+{
+  "info": {
+    "name": "national-chargepoint-registry-endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Charge Devices",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "https://chargepoints.dft.gov.uk/api/retrieve/registry/format/json",
+          "query": null,
+          "protocol": "https",
+          "host": [
+            "chargepoints",
+            "dft",
+            "gov",
+            "uk"
+          ],
+          "port": null,
+          "path": [
+            "api",
+            "retrieve",
+            "registry",
+            "format",
+            "json"
+          ]
+        },
+        "description": "Requests all the charge devices from the registry",
+        "header": [],
+        "body": null,
+        "auth": null
+      },
+      "protocolProfileBehavior": {
+        "followRedirects": false,
+        "followOriginalHttpMethod": false,
+        "followAuthorizationHeader": false
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Charge Devices in Great Britain",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "https://chargepoints.dft.gov.uk/api/retrieve/registry/country/gb/format/json",
+          "query": null,
+          "protocol": "https",
+          "host": [
+            "chargepoints",
+            "dft",
+            "gov",
+            "uk"
+          ],
+          "port": null,
+          "path": [
+            "api",
+            "retrieve",
+            "registry",
+            "country",
+            "gb",
+            "format",
+            "json"
+          ]
+        },
+        "description": "Requests all the charge devices from the registry within Great Britain",
+        "header": [],
+        "body": null,
+        "auth": null
+      },
+      "protocolProfileBehavior": {
+        "followRedirects": false,
+        "followOriginalHttpMethod": false,
+        "followAuthorizationHeader": false
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Charge Devices in London",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "https://chargepoints.dft.gov.uk/api/retrieve/registry/country/gb/post-town/london/format/json",
+          "query": null,
+          "protocol": "https",
+          "host": [
+            "chargepoints",
+            "dft",
+            "gov",
+            "uk"
+          ],
+          "port": null,
+          "path": [
+            "api",
+            "retrieve",
+            "registry",
+            "country",
+            "gb",
+            "post-town",
+            "london",
+            "format",
+            "json"
+          ]
+        },
+        "description": "Requests all the charge devices from the registry within London",
+        "header": [],
+        "body": null,
+        "auth": null
+      },
+      "protocolProfileBehavior": {
+        "followRedirects": false,
+        "followOriginalHttpMethod": false,
+        "followAuthorizationHeader": false
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Charge Devices in Liverpool",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "https://chargepoints.dft.gov.uk/api/retrieve/registry/country/gb/post-town/liverpool/format/json",
+          "query": null,
+          "protocol": "https",
+          "host": [
+            "chargepoints",
+            "dft",
+            "gov",
+            "uk"
+          ],
+          "port": null,
+          "path": [
+            "api",
+            "retrieve",
+            "registry",
+            "country",
+            "gb",
+            "post-town",
+            "liverpool",
+            "format",
+            "json"
+          ]
+        },
+        "description": "Requests all the charge devices from the registry within Liverpool",
+        "header": [],
+        "body": null,
+        "auth": null
+      },
+      "protocolProfileBehavior": {
+        "followRedirects": false,
+        "followOriginalHttpMethod": false,
+        "followAuthorizationHeader": false
+      },
+      "response": []
+    }
+  ]
+}
