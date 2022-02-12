@@ -25,6 +25,7 @@ app.use('/electricPoints', async function (req, res) {
   const town = req.query.town
   const response = await fetch(`https://chargepoints.dft.gov.uk/api/retrieve/registry/post-town/${town}/limit/1000/format/json`)
   const json = await response.json()
+  console.log(json)
   res.json(json)
 })
 
